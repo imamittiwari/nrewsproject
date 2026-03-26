@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'newsapp/css/style.css' %}">
+</head>
+<body>
+    
+    <div class="container">
+        <p>Welcome to ProjectNews!</p>
+         <img src="{% static 'newsapp\logo.png' %}" alt="logo" height="200px" width="200px">
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, suscipit quam recusandae placeat nobis facere consequatur minima maiores? Cum deserunt vero sit eos!</p>
+    <!--     <h1>ProjectNews</h1>    -->
+    <nav>
+        <ul>
+            <li><a href="/sports/">Sports</a></li>
+            <li><a href="/business/">Business</a></li>
+            <li><a href="/entertainment/">Entertainment</a></li>
+        </ul>
+        
+    </nav>
+</body>
+</html>

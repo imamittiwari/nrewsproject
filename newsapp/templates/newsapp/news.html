@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ category }} News</title>
+    <link rel="stylesheet" href="{% static 'newsapp/css/style.css' %}">
+</head>
+<body>
+    <h1>{{ category }} News</h1>
+
+        
+    <div class="container">
+        {% for item in news_list %}
+            <p>{{ item }}</p>
+        {% endfor %}
+    </div>
+
+
+    {% if category == 'Sports' %}
+        <img src="{% static 'newsapp/images/1.png' %}" alt="img" height="200px" width="200px">
+        <img src="{% static 'newsapp/images/2.png' %}" alt="img" height="200px" width="200px">
+        <img src="{% static 'newsapp/images/3.png' %}" alt="img" height="200px" width="200px">
+    {% endif %}
+
+    <hr>
+
+    {% if category == 'Business' %}
+        <img src="{% static 'newsapp/images/4.png' %}" alt="img" height="200px" width="200px">
+        <img src="{% static 'newsapp/images/5.png' %}" alt="img" height="200px" width="200px">
+        <img src="{% static 'newsapp/images/6.png' %}" alt="img" height="200px" width="200px">
+    {% endif %}
+
+     <hr>
+
+    {% if category == 'Entertainment' %}
+        <img src="{% static 'newsapp/images/9.png' %}" alt="img1" height="200px" width="200px">
+        <img src="{% static 'newsapp/images/7.png' %}" alt="img" height="200px" width="200px">
+        <img src="{% static 'newsapp/images/8.png' %}" alt="img" height="200px" width="200px">
+    {% endif %}
+
+    <nav>
+        
+        <li><a href="/sports/">Sports</a></li>
+       <li> <a href="/business/">Business</a></li>
+        <li><a href="/entertainment/">Entertainment</a></li>
+        
+    </nav>
+    <button><a href="{% url 'home' %}">Home</a></button>
+
+
+
+
+
+
+</body>
+
+    
+    
+
+    
+
+
+</html>
